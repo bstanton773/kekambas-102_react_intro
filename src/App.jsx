@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 
 
 function App() {
-    let myName = 'Brian';
-    let myCity = 'Chicago';
+    const [myName, setMyName] = useState('Brian');
+    const [myCity, setMyCity ]= useState('Chicago');
     let buttons = [
         {color: 'primary', step: 1},
         {color: 'secondary', step: 10},
@@ -19,9 +19,14 @@ function App() {
         setCount(count + step);
     };
 
+    function updateUserInfo(userName, userHometown){
+        setMyName(userName);
+        setMyCity(userHometown);
+    };
+
     return (
         <>
-            <Navbar name={myName} test={123} city={myCity}/>
+            <Navbar name={myName} city={myCity} updateUserInfo={updateUserInfo}/>
             <div className="container">
                 <h1>Hello World</h1>
                 <h4 className='text-center'>Count: {count}</h4>
