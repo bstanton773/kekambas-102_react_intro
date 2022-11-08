@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ButtonDisplay from './components/ButtonDisplay';
 import Navbar from "./components/Navbar";
+import RacerClassDisplay from './components/RacerClassDisplay';
 import RacerDisplay from './components/RacerDisplay';
 
 
@@ -18,7 +19,8 @@ function App() {
             <Navbar name={myName} city={myCity} updateUserInfo={updateUserInfo}/>
             <div className="container">
                 <ButtonDisplay />
-                <RacerDisplay />
+                {/* <RacerDisplay /> */}
+                <RacerClassDisplay />
             </div>
         </>
     )
