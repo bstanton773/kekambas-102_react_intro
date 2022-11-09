@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
 
@@ -14,7 +15,7 @@ export default function Navbar(props) {
     return (
         <nav className="navbar navbar-dark bg-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">Welcome {props.name} from {props.city}</a>
+                <Link className="navbar-brand" to="/">Welcome {props.name} from {props.city}</Link>
                 <form className="row" onSubmit={handleFormSubmit}>
                     <div className="col">
                         <input type="text" name="username" id="" className="form-control" placeholder='Enter Name'/>
