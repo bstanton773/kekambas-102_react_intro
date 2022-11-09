@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import ButtonDisplay from './components/ButtonDisplay';
+import Kekambas from './components/Kekambas';
+import KekambasClass from './components/KekambasClass';
 import Navbar from "./components/Navbar";
 import RacerClassDisplay from './components/RacerClassDisplay';
 import RacerDisplay from './components/RacerDisplay';
@@ -20,7 +22,9 @@ function App() {
             <div className="container">
                 <ButtonDisplay />
                 {/* <RacerDisplay /> */}
-                <RacerClassDisplay />
+                {/* <RacerClassDisplay /> */}
+                <KekambasClass />
+                <Kekambas />
             </div>
         </>
     )
