@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ButtonDisplay from './components/ButtonDisplay';
+import Home from './components/Home';
 import Navbar from "./components/Navbar";
-import RacerClassDisplay from './components/RacerClassDisplay';
+// import RacerClassDisplay from './components/RacerClassDisplay';
 import RacerDisplay from './components/RacerDisplay';
 
 
@@ -20,7 +21,8 @@ function App() {
             <Navbar name={myName} city={myCity} updateUserInfo={updateUserInfo}/>
             <div className="container">
                 <Routes>
-                    <Route path='/' element={<ButtonDisplay />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/buttons' element={<ButtonDisplay />} />
                     <Route path='/standings' element={<RacerDisplay />} />
                 </Routes>
                 
