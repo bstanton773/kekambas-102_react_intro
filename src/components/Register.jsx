@@ -18,20 +18,21 @@ export default class Register extends Component {
         let password = event.target.password.value;
         let confirmPass = event.target.confirmPass.value;
         if (password !== confirmPass){
-            console.warn('Passwords do not match!');
+            this.props.flashMessage('Passwords do not match!', 'danger');
         } else {
-            console.log('These passwords do match');
 
             // Set up request to our Flask API - POST to /api/users
             let myHeaders = new Headers();
             myHeaders.append('Content-Type', 'application/json');
 
+            // Get data from our form and stringify to convert to JSON request
             let formData = JSON.stringify({
                 username: event.target.username.value,
                 email: event.target.email.value,
                 password
             })
 
+            // Make request to Flask API
             fetch("http://localhost:5000/api/users", {
                 method: 'POST',
                 headers: myHeaders,
@@ -40,9 +41,10 @@ export default class Register extends Component {
                 .then(res => res.json())
                 .then(data => {
                     if (data.error){
-                        console.error(data.error)
+                        this.props.flashMessage(data.error, 'danger')
                     } else {
                         console.log(data)
+                        this.props.flashMessage(`${data.username} has been created`, 'success')
                         this.setState({
                             redirect: true
                         })
