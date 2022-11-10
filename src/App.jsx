@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Navbar from "./components/Navbar";
 // import RacerClassDisplay from './components/RacerClassDisplay';
 import RacerDisplay from './components/RacerDisplay';
+import Register from './components/Register';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/' element={<Home />} />
                     <Route path='/buttons' element={<ButtonDisplay />} />
                     <Route path='/standings' element={<RacerDisplay />} />
+                    <Route path='/register' element={<Register />} />
                 </Routes>
                 
             </div>
