@@ -37,7 +37,7 @@ function App() {
                     <Route path='/buttons' element={<ButtonDisplay />} />
                     <Route path='/standings' element={<RacerDisplay />} />
                     <Route path='/register' element={<Register flashMessage={flashMessage}/>} />
-                    <Route path='/login' element={<Login />} />
+                    <Route path='/login' element={<Login flashMessage={flashMessage} />} />
                 </Routes>
                 
             </div>

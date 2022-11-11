@@ -17,7 +17,7 @@ export default function Home(props) {
     return (
         <>
             <h1 className="text-center">Welcome to the Blog</h1>
-            {posts.map(post => <PostCard post={post}/>)}
+            {posts.map(post => <PostCard key={post.id} post={post}/>)}
         </>
     )
 }
