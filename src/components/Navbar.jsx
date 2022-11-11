@@ -22,10 +22,18 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <Link className="nav-link" to="/">Home</Link>
-                        <Link className="nav-link" to="/buttons">Buttons</Link>
-                        <Link className="nav-link" to="/standings">F1 Standing</Link>
-                        <Link className="nav-link" to="/register">Register</Link>
-                        <Link className="nav-link" to="/login">Login</Link>
+                        {props.loggedIn ? (
+                            <>
+                            <Link className="nav-link" to="/buttons">Buttons</Link>
+                            <Link className="nav-link" to="/standings">F1 Standing</Link>
+                            <Link className="nav-link" to="/" onClick={props.logUserOut}>Logout</Link>
+                            </>
+                        ): (
+                            <>
+                            <Link className="nav-link" to="/register">Register</Link>
+                            <Link className="nav-link" to="/login">Login</Link>
+                            </>
+                        )}
                     </div>
                 </div>
                 <form className="row" onSubmit={handleFormSubmit}>
