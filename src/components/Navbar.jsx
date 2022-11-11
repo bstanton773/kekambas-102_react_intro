@@ -25,6 +25,7 @@ export default function Navbar(props) {
                         <Link className="nav-link" to="/buttons">Buttons</Link>
                         <Link className="nav-link" to="/standings">F1 Standing</Link>
                         <Link className="nav-link" to="/register">Register</Link>
+                        <Link className="nav-link" to="/login">Login</Link>
                     </div>
                 </div>
                 <form className="row" onSubmit={handleFormSubmit}>

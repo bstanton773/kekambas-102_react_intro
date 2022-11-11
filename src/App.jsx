@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import AlertMessage from './components/AlertMessage';
 import ButtonDisplay from './components/ButtonDisplay';
 import Home from './components/Home';
+import Login from './components/Login';
 import Navbar from "./components/Navbar";
 // import RacerClassDisplay from './components/RacerClassDisplay';
 import RacerDisplay from './components/RacerDisplay';
@@ -36,6 +37,7 @@ function App() {
                     <Route path='/buttons' element={<ButtonDisplay />} />
                     <Route path='/standings' element={<RacerDisplay />} />
                     <Route path='/register' element={<Register flashMessage={flashMessage}/>} />
+                    <Route path='/login' element={<Login />} />
                 </Routes>
                 
             </div>
